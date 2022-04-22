@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 public class Employee {
@@ -24,10 +25,8 @@ public class Employee {
 	@Column
 	Double basicSalary;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="employeeId30_addressId30",joinColumns = @JoinColumn(name="employee_Id",referencedColumnName="employeeId"),
-	inverseJoinColumns = @JoinColumn(name="addressId_Id",referencedColumnName="addressId",unique = true))
-	
+	@OneToOne(mappedBy ="employee" ,cascade = CascadeType.ALL )
+	@PrimaryKeyJoinColumn
 	Address address;
 	
 	@OneToMany(cascade = CascadeType.ALL)

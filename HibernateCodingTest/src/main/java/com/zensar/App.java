@@ -27,7 +27,7 @@ public class App {
 
 		Address address = new Address("bbsr", "761104",null);
 		employee.setAddress(address);
-		
+		address.setEmployee(employee);
 		employee.addSkill(new Skill("java",8));
 		employee.addSkill(new Skill("spring",6));
 		

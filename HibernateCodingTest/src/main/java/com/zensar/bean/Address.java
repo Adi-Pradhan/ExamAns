@@ -21,7 +21,6 @@ public class Address {
 	@Column
 	String pincode;
 
-
 	@OneToOne
 	@MapsId
 	@JoinColumn(name="EMPID")
