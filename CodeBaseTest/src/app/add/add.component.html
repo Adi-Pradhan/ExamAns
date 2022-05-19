@@ -1,0 +1,60 @@
+<p>
+  add works!
+</p>
+<form [formGroup]="loanForm">
+  <table>
+    <tr>
+      <td><label for="">LoanID</label></td>
+      <input formControlName="loanid">
+      <div style="color: red;" *ngIf="categoryForm.get('categoryname').touched 
+          && categoryForm.get('categoryname').invalid">
+        ID is Manadatory
+      </div>
+    </tr>
+    <tr>
+      <td><label for="">LoanCustomerName</label></td>
+      <input formControlName="loanCustomerName">
+      <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched 
+          && categoryForm.get('categorydescription').invalid">
+        CustomerName is Manadator
+      </div>
+    </tr>
+      <td><label for="">LoanAmount</label></td>
+      <input formControlName="loanAmount" type="number">
+      <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched 
+      && categoryForm.get('categorydescription').invalid">
+        loanAmount is Manadator
+      </div>
+    </tr>
+    <tr>
+      <td><label for="">DateOfLoan</label></td>
+      <input formControlName="dateOfLoan">
+      <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched 
+    && categoryForm.get('categorydescription').invalid">
+        DateOfLoan is Manadator
+      </div>
+    </tr>
+    <tr>
+      <td><label for="">Tenure</label></td>
+      <input formControlName="tenure" type="number">
+      <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched 
+  && categoryForm.get('categorydescription').invalid">
+        Tenure is Manadator
+      </div>
+    </tr>
+    <tr>
+      <td><label for="">RateOfInterest</label></td>
+      <input formControlName="rateOfInterest" type="number">
+      <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched 
+  && categoryForm.get('categorydescription').invalid">
+        RateOfInterest is Manadator
+      </div>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="Add()">Add</button>
+      </td>
+    </tr>
+  </table>
+</form>
+

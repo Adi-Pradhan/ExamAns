@@ -1,0 +1,23 @@
+<p>
+  list works!
+</p>
+<table border="1">
+  <tr>
+    <th>LoanId</th>
+    <th>LoanCustomerNmae</th>
+    <th>LoanAmount</th>
+    <th>DateOfloan</th>
+    <th>Tenure</th>
+    <th>RateOfInterest</th>
+    
+  </tr>
+  <tr *ngFor="let c of allLoans" ,let even "[ngStyle]=" {background:'even'? 'red' :'green'}">
+
+    <td>{{c.loanId}}</td>
+    <td>{{c.loanCustomerNmae}}</td>
+    <td>{{c.loanAmount}}</td>
+    <td>{{c.dateOfloan}}</td>
+    <td>{{c.tenure}}</td>
+    <td>{{c.rateOfInterest}}</td>
+  </tr>
+</table>
